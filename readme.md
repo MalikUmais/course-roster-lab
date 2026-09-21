@@ -23,3 +23,6 @@ done the decalaration and printing and checking them individually
 
 PART 6:
 write if/else switch ternary condtions
+
+PART 7:
+use for in , forEach and colllection literal and print every announcment using for in loop
