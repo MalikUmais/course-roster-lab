@@ -1,0 +1,53 @@
+// Part 1
+/// @param appName
+/// Prints a welcome message.
+void printWelcome(String appName) {
+  print('=== $appName ===');
+}
+
+String generateCode(String title) {
+  return title.substring(0, 2).toUpperCase() + '101';
+}
+
+void main() {
+  printWelcome('Course Roster Manager');
+  //Part 2
+  const int maxCapacity = 4;
+  final DateTime createdAt = DateTime.now(); // this cannot be const because it is determined at runtime
+  String courseTitle = 'CS201: Mobile App Development';
+  int capacity = maxCapacity;
+  double creditHours = 3.0;
+  bool isOpen = true;
+  List<String> enrolledStudents = ['Aiden', 'Maria', 'Jamal'];
+  Set<String> waitlist = {'Priya', 'Noah'};
+  Map<String, int> attendanceCount = {'Aiden': 3, 'Maria': 4, 'Jamal': 2};
+  print('$courseTitle, $capacity, ${enrolledStudents.length}');
+
+  //Part 3
+  String? instructorEmail;
+  print(instructorEmail ?? 'TBA');
+  late String enrollmentCode;
+  enrollmentCode = generateCode(courseTitle);
+  print(enrollmentCode);
+  // print(instructorEmail!.length);
+  print(instructorEmail?.length); //safe version
+
+  //Part 4
+  String rawNames = 'Aiden , maria ,JAMAL , Priya';
+  List<String> cleanNames = [];
+  for (var name in rawNames.split(',')) {
+    cleanNames.add(name.trim());
+  }
+  print(cleanNames);
+  String courseDescription =
+      '''
+        Course: $courseTitle
+        Capacity: $capacity
+        Enrolled Students: ${enrolledStudents.length}
+        Credit Hours: $creditHours
+        Instructor: ${instructorEmail ?? 'TBA'}
+        Created At: $createdAt
+      ''';
+  print(courseDescription);
+  print('Seats Left: ${capacity - enrolledStudents.length}');
+}
