@@ -20,3 +20,6 @@ print summary line
 
 PART 5:
 done the decalaration and printing and checking them individually
+
+PART 6:
+write if/else switch ternary condtions

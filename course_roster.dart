@@ -81,4 +81,25 @@ void main() {
   bonusSeats ??= 0; 
   print(bonusSeats);
 
+  //Part 6
+  if(isOpen && enrolledStudents.length < capacity) {
+    print('Course is open and has available seats.');
+  }
+  else{
+    print('Course is closed or full.');
+  }
+  int enrollmentStatusCode=200;
+  switch(enrollmentStatusCode){
+    case 200:
+      print('Enrolled');
+      break;
+    case 404:
+      print('Course not found');
+      break;
+    default:
+      print('Unknown error');
+      break;
+  }
+  String statusTag=isOpen? 'OPEN':'FULL';
+  print('$statusTag');
 }
