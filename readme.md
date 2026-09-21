@@ -1,0 +1,19 @@
+NAME: MUHAMMAD UMAIS FAROOQ
+REG_NO: 04072313025
+
+NOTE:
+PART 1
+added helper function 'printWelcome' called it in main
+
+PART 2:
+declare variables printed 3 of them in an interpolated string
+checked DateTime declaration cannot be made const because of runtime
+
+PART 3:
+declare variables write helper function 'generateCode' and assign its value to enrollmentcode
+replace print(instructorEmail!.length); with  print(instructorEmail?.length); //safe version
+
+PART 4:
+declare rawnames string format them in loop and store in list
+build mutli line desription 
+print summary line 
