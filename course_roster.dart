@@ -1,4 +1,6 @@
 // Part 1
+import 'dart:math';
+
 /// @param appName
 /// Prints a welcome message.
 void printWelcome(String appName) {
@@ -50,4 +52,33 @@ void main() {
       ''';
   print(courseDescription);
   print('Seats Left: ${capacity - enrolledStudents.length}');
+
+  //Part 5
+  int fullGroups = enrolledStudents.length ~/ 3;
+  int leftOver = enrolledStudents.length % 3;
+  print('Full Groups: $fullGroups');
+  print('Left Over: $leftOver');
+
+  Object formInput = 'twenty-two';
+  if (formInput is String) {
+    print(formInput);
+  }
+  if (formInput is! int) {
+    print('Form input is not an integer.');
+  }
+
+  final report = StringBuffer()
+    ..write('$courseTitle\n')
+    ..write('$capacity\n')
+    ..write('${enrolledStudents.length}');
+  print(report.toString());
+
+  List<String>? extraNotes;
+  extraNotes?.add('Room change pending');
+  print(extraNotes);
+
+  int? bonusSeats;
+  bonusSeats ??= 0; 
+  print(bonusSeats);
+
 }

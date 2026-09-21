@@ -17,3 +17,6 @@ PART 4:
 declare rawnames string format them in loop and store in list
 build mutli line desription 
 print summary line 
+
+PART 5:
+done the decalaration and printing and checking them individually
